@@ -14,8 +14,9 @@
 }
 
 #main {
+    position: relative;
     max-width: 2000px;
-    min-height: 100vh;
+    min-height: calc(100vh - 64px);
     margin: 0 auto;
     padding-left: 260px;
     background-color: #222;

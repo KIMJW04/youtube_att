@@ -71,12 +71,14 @@
     }
 
     .keyword {
+        margin-top: -10px;
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
 
         li {
             display: inline-block;
-            margin: 5px;
+            margin: 5px 20px 5px 0px;
             padding: 2px 6px;
             border-radius: 20px;
             border: 1px solid #494949c2;
@@ -84,6 +86,7 @@
             background-color: #242424a2;
 
             a {
+                padding: 0.1rem;
                 display: inline-block;
                 font-size: 0.7rem;
 
@@ -126,8 +129,10 @@
 
 @media (max-width: 960px) {
     .header__logo {
+        margin-top: 6px;
         position: fixed;
         left: 0;
         top: 0;
+        width: 220px;
     }
 }

@@ -2,8 +2,6 @@ import React from 'react'
 
 import { HelmetProvider, Helmet } from 'react-helmet-async'
 
-import Header from './Header'
-import Footer from './Footer'
 import Search from './Search'
 
 const Main = (props) => {
@@ -18,12 +16,10 @@ const Main = (props) => {
                 <meta name="description" content={props.description} />
             </Helmet>
 
-            <Header />
             <main id='main' role='main'>
                 <Search />
                 {props.children}
             </main>
-            <Footer />
         </HelmetProvider>
     )
 }
