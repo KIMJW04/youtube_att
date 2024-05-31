@@ -33,4 +33,42 @@
         margin-bottom: 10px;
         font-size: 2rem;
     }
+
+    .desc {
+        padding: 0 10vw;
+    }
+
+    .info {
+        margin-top: 30px;
+
+        span {
+            background-color: #a6a6a631;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 4px;
+
+            svg {
+                width: 20px;
+                height: 20px;
+                vertical-align: -5px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.channel__video {
+    margin-top: 100px;
+    padding: 2rem 2rem 3rem 2rem;
+}
+
+.channel_more {
+    text-align: center;
+
+    button {
+        cursor: pointer;
+        margin-bottom: 40px;
+        padding: 7px 20px;
+        border-radius: 20px;
+    }
 }
