@@ -17,7 +17,7 @@ const SearchPage = () => {
                 const data = await response.json();
                 setVideos(data.items);
                 setNextPageToken(data.nextPageToken);
-                // console.log(data);
+                console.log(data);
 
                 // 최소 로딩 소스 1초 유지
                 setTimeout(() => {

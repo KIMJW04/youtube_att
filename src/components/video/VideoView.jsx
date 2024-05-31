@@ -1,7 +1,11 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const VideoView = ({ videos }) => {
+    if (!videos || videos.length === 0) {
+        return <p>비디오를 불러오는 중입니다...</p>;
+    }
+
     return (
         <>
             {videos.map((video, index) => (
@@ -23,7 +27,7 @@ const VideoView = ({ videos }) => {
                 </div >
             ))}
         </>
-    )
-}
+    );
+};
 
-export default VideoView
+export default VideoView;
