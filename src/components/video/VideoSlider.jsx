@@ -1,6 +1,10 @@
 import React from 'react';
+import { Navigation, A11y, Autoplay, Mousewheel } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 const VideoSlider = ({ videos, id, title }) => {
     if (!videos || videos.length === 0) {
@@ -8,17 +12,23 @@ const VideoSlider = ({ videos, id, title }) => {
     }
 
     return (
-        <section id={id}>
+        <section id={id} className='slider__wrap'>
             <h2>{title}</h2>
             <Swiper
-                spaceBetween={10}
-                slidesPerView={4}
+                modules={[Navigation, A11y, Autoplay, Mousewheel]}
+                spaceBetween={50}
+                slidesPerView={3}
                 navigation
-                pagination={{ clickable: true }}
+                loop={true}
+                autoplay={{ delay: 3000, disableOnInteraction: false }}
+                mousewheel={true}
+                speed={500} // 슬라이드 전환 속도를 줄여 매끄럽게
+                onSwiper={(swiper) => console.log(swiper)}
+                onSlideChange={() => console.log('slide change')}
             >
                 {videos.map((video, index) => (
-                    <SwiperSlide key={index}>
-                        <div className='video' >
+                    <SwiperSlide key={index} className='video__slider'>
+                        <div className='video' key={index} >
                             <div className="video__thumb play__icon">
                                 <Link
                                     to={`/video/${video.id.videoId}`}

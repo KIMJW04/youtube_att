@@ -14,7 +14,7 @@ const Home = () => {
     useEffect(() => {
         const fetchVideosByRegion = async (region, setVideos) => {
             try {
-                const response = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&q=${region}+history&order=date&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`);
+                const response = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&q=${region}+history&order=date&maxResults=10&key=${process.env.REACT_APP_YOUTUBE_API_KEY2}`);
                 const data = await response.json();
                 setVideos(data.items);
             } catch (error) {
@@ -22,13 +22,13 @@ const Home = () => {
             }
         };
 
-        fetchVideosByRegion('Asia', setAsia);
-        fetchVideosByRegion('Europe', setEurope);
-        fetchVideosByRegion('North America', setNorthAmerica);
-        fetchVideosByRegion('South America', setSouthAmerica);
-        fetchVideosByRegion('Africa', setAfrica);
-        fetchVideosByRegion('Oceania', setOceania);
-        fetchVideosByRegion('World War', setWorldWar);
+        fetchVideosByRegion('아시아역사', setAsia);
+        fetchVideosByRegion('유럽역사', setEurope);
+        fetchVideosByRegion('북아메리카역사', setNorthAmerica);
+        fetchVideosByRegion('남아메리카역사', setSouthAmerica);
+        fetchVideosByRegion('아프리카역사', setAfrica);
+        fetchVideosByRegion('오세아니아역사', setOceania);
+        fetchVideosByRegion('세계대전', setWorldWar);
     }, []);
 
     return (
