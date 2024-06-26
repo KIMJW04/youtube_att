@@ -24,6 +24,7 @@ const Home = () => {
             }
         };
 
+
         fetchVideosByRegion("아시아역사", setAsia);
         fetchVideosByRegion("유럽역사", setEurope);
         fetchVideosByRegion("북아메리카역사", setNorthAmerica);
